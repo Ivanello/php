@@ -7,7 +7,7 @@ run:
 
 ## Software requirements: 
 * installed docker 
-* installed composer
+* installed php/composer
 
 ## run docker 
 
@@ -17,7 +17,11 @@ to connect to docker use any VNC viewer (password: secret)
 
 `$ vncview 127.0.0.1:5901`
 
-* useful comands for docker $ docker ps $ docker stop selenium-chrome 
+* useful comands for docker 
+
+`$ docker ps`
+
+`$ docker stop selenium-chrome`
 
 `$ docker start selenium-chrome`
 
@@ -29,6 +33,6 @@ to connect to docker use any VNC viewer (password: secret)
 
 `$ ./vendor/bin/steward run staging chrome`
 
-* to debug run
+* to debug, run
 
 `$ ./vendor/bin/steward run staging chrome -vvv`

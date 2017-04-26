@@ -33,6 +33,7 @@ $nodes = $doc->getElementsByTagName('title');
 //get and display what you need:
 $title = $nodes->item(0)->nodeValue;
 $metas = $doc->getElementsByTagName('meta');
+$description = "";
 for ($i = 0; $i < $metas->length; $i++)
 	{
 		$meta = $metas->item($i);
@@ -40,10 +41,10 @@ for ($i = 0; $i < $metas->length; $i++)
 			$description = $meta->getAttribute('content');
 	}
 
-system('clear');
-echo "URL: $url" ."\r\n";
-echo "Title: $title"."\r\n";
-echo "Description: $description"."\r\n";
+// system('clear');
+echo "URL: $url\r\n";
+echo "Title: $title\r\n";
+echo "Description: $description \r\n\r\n";
 
 assert_options(ASSERT_ACTIVE, 1);
 assert_options(ASSERT_WARNING, 0);
@@ -59,6 +60,6 @@ function my_assert_handler($file, $line, $code, $desc = null)
 		echo "\n";
 	}
 
-assert ($expected[1][1]==$title,"Expected ".$expected[0][1]." is: '".$expected[1][1]."' and actual is: '" . $title."'."."\r\n");
-assert ($expected[1][2]==$description,"Expected ".$expected[0][2]." is: '".$expected[1][2]."' and actual is: '".$description."'."."\r\n");
+assert ($expected[1][1]==$title,"Expected ".$expected[0][1]." is: '".$expected[1][1]."' and actual is: '" . $title."'.\r\n");
+assert ($expected[1][2]==$description,"Expected ".$expected[0][2]." is: '".$expected[1][2]."' and actual is: '".$description."'.\r\n");
 ?>
